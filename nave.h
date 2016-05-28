@@ -4,7 +4,7 @@
 #include<windows.h>
 #include<conio.h>
 #include "gameboard.h"
-
+#include "meteors.h"
 #define L 75
 #define R 77
 #define T 72
@@ -18,5 +18,7 @@ public:
 	void pintar();
 	void borrar();
 	void mover();
+	void pintar_crash();
+	void crash(class meteors &impact);
 };
 #endif
