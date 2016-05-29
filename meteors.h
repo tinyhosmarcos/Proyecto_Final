@@ -12,10 +12,10 @@ private:
 public:
 	meteors(){x=3;y=4;}
 	void frec_col();
+	void frec_velocidad();
 	void pintar();
 	void borrar();
 	void mover();
-	void frec_velocidad();
 	int get_x(){return x;}
 	int get_y(){return y;}
 	int set_x(int _x){x=_x;}

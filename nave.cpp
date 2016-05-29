@@ -19,10 +19,10 @@ void nave::mover(){
 	if (kbhit()){
 		char tecla=getch();
 		borrar();
-		if(tecla == L and x-3>3) x-=3;
-		if(tecla == R and x+8<78) x+=3;
-		if(tecla == T and y>4) y-=2;
-		if(tecla == B and y+3<45) y+=2;
+		if(tecla == L and x>3) x--;
+		if(tecla == R and x+6<78) x++;
+		if(tecla == T and y>4) y--;
+		if(tecla == B and y+3<45) y++;
 		pintar();
 	}
 }
@@ -30,6 +30,7 @@ void nave::crash(class meteors &impact){
 	if(x<=impact.get_x() &&  x+5>impact.get_x() && y<=impact.get_y() && y+2>=impact.get_y()){
 		impact.borrar();
 		impact.frec_col();
+		impact.frec_velocidad();
 		pintar_crash();
 		
 	}

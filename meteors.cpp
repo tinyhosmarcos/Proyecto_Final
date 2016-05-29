@@ -5,7 +5,13 @@ void meteors::frec_col(){
 	y=4;
 	
 }
-	
+void meteors::frec_velocidad(){
+	if(y>44 or y==4){
+		velocidad=rand()%2+1;
+	}
+	y+=velocidad;
+}
+
 void meteors::pintar(){
 	gotoxy(x,y);printf("%c",111);
 }
@@ -20,10 +26,4 @@ void meteors::mover(){
 		
 	}
 	pintar();
-}
-void meteors::frec_velocidad(){
-	if(y>44 or y==4){
-		velocidad=rand()%2+1;
-	}
-	y+=velocidad;
 }

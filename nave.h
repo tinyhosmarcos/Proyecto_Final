@@ -15,6 +15,8 @@ private:
 	int y;
 public:
 	nave(int _x,int _y):x(_x),y(_y){};
+	int get_x(){return x;}
+	int get_y(){return y;}
 	void pintar();
 	void borrar();
 	void mover();
